@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste02</title>
+    <style>
+        body {
+            background: black;
+            color: rgb(255, 208, 0);
+            font: normal 25px Arial;
+        }
+        h1{
+            font: normal 35px Arial;
+            margin-left: 100px;
+            color: rgb(255, 251, 0);
+        }
+        input#txtidade {
+            width: 120px;  
+            margin-left: 5px;
+            background: yellow;
+            margin-top: 10px;
+        }
+        input#txtnome {
+            width: 120px;
+            margin-left: 0px;
+            background: yellow;
+            margin-top: 10px;
+        }
+        input {
+            width: 110px; 
+            font: bold 15px Arial;
+            margin-left: 100px;
+            background: yellow;
+            margin-top: 10px;
+        }
+        div#res {
+            font: normal 20px Arial;
+            margin-top: 10px;
+        }
+        b {
+            color:rgb(255, 251, 0)
+        }
+    </style>
+  
+</head>
+<body>
+   <h1><strong>Ficha cadrastral</strong></h1>
+   <b>Nome: <input type="string" name="txtname" id="txtnome"><br/></b>
+   <b>Idade: <input type="number" name="txtidade" id="txtidade"><br/></>
+   <input type="button" value="Cadastrar-se" onclick="Cadastrar()">
+    <div id="res"> </div>
+    <script>
+       function Cadastrar() {
+        var txtnome = document.querySelector('input#txtnome')
+        var txtidade = document.querySelector('input#txtidade')
+        var nome = String(txtnome.value) 
+        var idade = Number(txtidade.value)
+        var res = document.querySelector('div#res')
+        res.innerHTML = `Confima para mim: Você se cadastrou com o nome de <strong>${nome}</strong> e com a idade de ${idade} anos. Certo?`
+
+    } 
+    </script>
+</body>
+</html> 
